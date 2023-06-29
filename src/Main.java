@@ -19,10 +19,10 @@ public class Main {
                 case 1:
                     System.out.println("Digite o elemento a ser inserido:");
                     int data = Integer.parseInt(System.console().readLine());
-                    queue.inQueue(data);
+                    queue.adiciona(data);
                     break;
                 case 2:
-                    queue.dequeue();
+                    queue.remove();
                     break;
                 case 3:
                     queue.display();
