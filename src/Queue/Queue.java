@@ -34,7 +34,7 @@ public class Queue {
       Além disso, o tamanho da fila é incrementado e uma mensagem é exibida para indicar que o elemento
       foi adicionado com sucesso.
      */
-    public void inQueue(int data){
+    public void adiciona(int data){
         Node newNode = new Node(data);
         if(isEmpty()){
             front = newNode;
@@ -48,12 +48,12 @@ public class Queue {
     }
 
     /*
-    O método dequeue() remove o elemento da frente da fila.
+    O método remove() remove o elemento da frente da fila.
      Ele verifica se a fila está vazia e, se estiver, imprime uma mensagem de erro e retorna.
      Caso contrário, ele armazena o valor do elemento da frente, atualiza o ponteiro front para o próximo nó
      e decrementa o tamanho da fila. Por fim, exibe uma mensagem indicando que o elemento foi removido com sucesso.
      */
-    public void dequeue() {
+    public void remove() {
         if (isEmpty()) {
             System.out.println("A fila está vazia.");
             return;
@@ -65,10 +65,8 @@ public class Queue {
     }
 
     /*
-    O método dequeue() remove o elemento da frente da fila.
-    Ele verifica se a fila está vazia e, se estiver, imprime uma mensagem de erro e retorna. Caso contrário,
-    ele armazena o valor do elemento da frente, atualiza o ponteiro front para o próximo nó e decrementa o tamanho da fila.
-    Por fim, exibe uma mensagem indicando que o elemento foi removido com sucesso.
+    O método display mostra o conteúdo da fila. Se a fila estiver vazia, exibe uma mensagem informando isso e retorna.
+    Caso contrário, percorre a fila a partir do nó da frente até o nó traseiro, exibindo o valor de cada elemento na fila.
      */
     public void display(){
         if(isEmpty()){
